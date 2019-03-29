@@ -11,8 +11,8 @@ class App extends Component {
     }
   }
 
-  onLayoutSwitch = (layout) => {
-    this.setState({ isToggleOn: layout });
+  onLayoutSwitch = () => {
+    this.setState({ isToggleOn: !this.state.isToggleOn });
   }
 
   render() {
