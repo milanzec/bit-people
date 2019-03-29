@@ -1,7 +1,8 @@
 import { User } from "../entities/User";
+import { API_URL } from "../shared/constants";
 
 const fetchUsers = () => {
-    return fetch('https://randomuser.me/api/?results=15')
+    return fetch(`${API_URL}/?results=15`)
         .then((res) => {
             return res.json();
         })

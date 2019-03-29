@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SwitchLayout from "./SwitchLayout";
 
 class Header extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class Header extends Component {
         return (
             <header className='center-align'>
                 <h4>Bit Persons</h4>
+                <SwitchLayout isToggleOn={this.props.isToggleOn} />
             </header>
         );
     }
