@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    color: white;
+    background-color: #ec6f75;
+    padding: 15px;
+}
+
+main:first-child {
+    display: inline-block;
+    border: 1px red solid;
+}
+
+main > div {
+    display: inline-block;
+}

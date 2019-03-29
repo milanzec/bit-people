@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { fetchUsers } from "../services/usersService";
-import './HomePage.css';
-import ListItem from './ListItem';
+// import ListItem from './ListItem';
+import { UserCard } from "./UserCard";
+
 
 class HomePage extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class HomePage extends Component {
     componentDidMount() {
         fetchUsers().then((users) => {
             return this.setState({
-                users
+                users: users
             })
         })
     }
@@ -27,7 +28,8 @@ class HomePage extends Component {
 
         return this.state.users.map((user, index) => {
             return (
-                <ListItem key={index} className='row' src={user.avatar} fullName={`${user.firstName} ${user.lastName}`} email={user.email} birthday={user.birthday} />
+                /* <ListItem key={index} className='row' src={user.avatar} fullName={`${user.firstName} ${user.lastName}`} email={user.email} birthday={user.birthday} /> */
+                <UserCard key={index} src={user.avatar} fullName={`${user.firstName} ${user.lastName}`} email={user.email} birthday={user.birthday} />
             )
         })
     }

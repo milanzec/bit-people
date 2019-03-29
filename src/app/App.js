@@ -8,7 +8,9 @@ class App extends Component {
     return (
       <>
         <Header />
-        <HomePage />
+        <main>
+          <HomePage />
+        </main>
         <Footer />
       </>
     );
