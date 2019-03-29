@@ -7,13 +7,29 @@ body {
     padding: 0;
 }
 
-main div {
-    padding: 5px;
+ul {
+    padding-left: 0;
+}
+
+li {
+    padding: 10px;
     border: 1px solid gray;
 }
 
 header, footer {
     color: white;
-    padding: 5px;
-    background-color: #ec6f75;;
+    background-color: #ec6f75;
+    padding: 15px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+p {
+    font-weight: bold;
+}
+
+i {
+    margin-right: 5px;
 }

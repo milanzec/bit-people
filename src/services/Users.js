@@ -17,7 +17,7 @@ const fetchUsers = () => {
             return users.map((user) => {
                 console.log(user.firstName);
                 return (
-                    [user.firstName, user.lastName, user.email, user.birthday]
+                    [user.firstName, user.lastName, user.email, user.birthday, user.avatar]
                 );
             })
         })

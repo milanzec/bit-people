@@ -22,17 +22,24 @@ class HomePage extends Component {
 
         const bla = this.state.users.map((user, index) => {
             return (
-                <div className='container' key={index}>
-                    <p>{`${user[0]} ${user[1]}`}</p>
-                    <p>{user[2]}</p>
-                    <p>{user[3]}</p>
-                </div>
+                <li key={index} className='row'>
+                    <div className='col s2'>
+                        <img src={user[4]}></img>
+                    </div>
+                    <div className='col s10'>
+                        <p>{`${user[0]} ${user[1]}`}</p>
+                        <p><i className="fas fa-envelope"></i>{user[2]}</p>
+                        <p><i class="fas fa-birthday-cake"></i>{user[3]}</p>
+                    </div>
+                </li>
             )
         })
 
         return (
-            <main>
-                {bla}
+            <main className='container'>
+                <ul>
+                    {bla}
+                </ul>
             </main>
         );
     }

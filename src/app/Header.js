@@ -8,7 +8,7 @@ class Header extends Component {
     render() {
         return (
             <header className='center-align'>
-                <h1>Bit Persons</h1>
+                <h4>Bit Persons</h4>
             </header>
         );
     }
