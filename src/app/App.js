@@ -7,12 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isToggleOn: true
+      isToggleOn: false
     }
-
-    // setTimeout(() => {
-    //   this.onLayoutSwitch(true);
-    // }, 3000)
   }
 
   onLayoutSwitch = (layout) => {
@@ -22,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header isToggleOn={this.state.isToggleOn} />
+        <Header isToggleOn={this.onLayoutSwitch} />
         <main>
           <HomePage layout={this.state.isToggleOn ? 'grid' : 'list'} />
         </main>

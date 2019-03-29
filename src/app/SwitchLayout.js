@@ -7,18 +7,18 @@ class SwitchLayout extends Component {
             isToggleOn: this.props.isToggleOn
         }
 
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.setState(state => ({
-            isToggleOn: !state.isToggleOn
-        }));
-    }
+    // handleClick() {
+    //     this.setState(state => ({
+    //         isToggleOn: !state.isToggleOn
+    //     }));
+    // }
 
     render() {
         return (
-            <button onClick={this.handleClick}><i className="fas fa-grip-horizontal"></i>Switch</button>
+            <button onClick={this.props.isToggleOn}><i className="fas fa-grip-horizontal"></i>Switch</button>
         );
     }
 }
