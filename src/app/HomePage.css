@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main div {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+header, footer {
+    color: white;
+    padding: 5px;
+    background-color: #ec6f75;;
+}
