@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { fetchUsers } from "../services/Users";
+import { fetchUsers } from "../services/usersService";
 import './HomePage.css';
+import ListItem from './ListItem';
 
 class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: ['Loading...'],
+            users: [],
         }
     }
 
@@ -20,28 +21,15 @@ class HomePage extends Component {
 
     render() {
 
-        const bla = this.state.users.map((user, index) => {
+        if (!this.state.users.length) {
+            return <h3>Loading...</h3>
+        }
+
+        return this.state.users.map((user, index) => {
             return (
-                <li key={index} className='row'>
-                    <div className='col s2'>
-                        <img src={user[4]}></img>
-                    </div>
-                    <div className='col s10'>
-                        <p>{`${user[0]} ${user[1]}`}</p>
-                        <p><i className="fas fa-envelope"></i>{user[2]}</p>
-                        <p><i class="fas fa-birthday-cake"></i>{user[3]}</p>
-                    </div>
-                </li>
+                <ListItem key={index} className='row' src={user.avatar} fullName={`${user.firstName} ${user.lastName}`} email={user.email} birthday={user.birthday} />
             )
         })
-
-        return (
-            <main className='container'>
-                <ul>
-                    {bla}
-                </ul>
-            </main>
-        );
     }
 }
 

@@ -5,7 +5,11 @@ class User {
         this.firstName = firstName[0].toUpperCase() + firstName.slice(1);
         this.lastName = lastName[0].toUpperCase() + lastName.slice(1);
         this.email = `${email.slice(0, 3)}......${email.slice(9)}`;
-        this.birthday = new Date(birthday).toLocaleDateString();
+        this.birthday = `${new Date(birthday).toLocaleDateString()}`;
+    }
+
+    getBirthday() {
+        return this.birthday
     }
 }
 
