@@ -6,21 +6,22 @@ import Footer from './Footer';
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      isToggleOn: false
+      useGridLayout: false
     }
   }
 
   onLayoutSwitch = () => {
-    this.setState({ isToggleOn: !this.state.isToggleOn });
+    this.setState({ useGridLayout: !this.state.useGridLayout });
   }
 
   render() {
     return (
       <>
-        <Header isToggleOn={this.onLayoutSwitch} />
+        <Header onSwitchLayoutClick={this.onLayoutSwitch} />
         <main>
-          <HomePage layout={this.state.isToggleOn ? 'grid' : 'list'} />
+          <HomePage layout={this.state.useGridLayout ? 'grid' : 'list'} />
         </main>
         <Footer />
       </>
