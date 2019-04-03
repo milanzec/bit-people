@@ -9,10 +9,10 @@ class UserCard extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col s12">
-                    <div className="card">
-                        <div className="card-image">
-                            <img src={this.props.src} alt='User card' />
+                <div className="col s12" >
+                    <div className={`card ${this.props.gender === 'female' ? '#ffebee red lighten-5' : ''}`} >
+                        <div className="card-image" >
+                            <img src={this.props.src} alt='User card' style={{ height: '220px' }} />
                             <span className="card-title">{this.props.fullName}</span>
                         </div>
                         <div className="card-content">
