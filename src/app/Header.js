@@ -5,12 +5,17 @@ class Header extends Component {
         super(props);
         this.state = {}
     }
+
     render() {
         return (
-            <header className='center-align'>
-                <h4>Bit Persons</h4>
-                <button onClick={this.props.onSwitchLayoutClick}><i className="fas fa-grip-horizontal"></i>Switch</button>
-            </header>
+            <header>
+                <h4 className='center-align'>Bit Persons</h4>
+                <div style={{ paddingBottom: '15px' }}>
+                    <i className="fas fa-redo right"></i>
+                    <i onClick={this.props.onSwitchLayoutClick} className="fas fa-grip-horizontal right"></i>
+                </div>
+            </header >
+
         );
     }
 }
